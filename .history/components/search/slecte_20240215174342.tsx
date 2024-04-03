@@ -1,0 +1,57 @@
+"use client"
+import { sidebarLinks } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "../ui/button";
+
+const Selected = () => {
+
+    const pathname = usePathname();
+
+
+
+    return (
+        <div>
+
+
+            <div className="flex gap-6">
+                {sidebarLinks.map((item) => {
+                    const isActive = (pathname.includes(item.route) && item.route.length > 1) || pathname === item.route;
+
+
+
+
+
+                    return (
+
+                        <Button
+
+                            key={item.label}
+                            className={`${isActive
+                                ? "bg-slate-500"
+                                : ""
+                                }  flex items-center justify-start gap-4  w-[220px] p-4 rounded-2xl hover:bg-slate-500 bg-[#9ca9b8fa]`}
+                        >
+                            <Link href={item.route}>
+                                <Image
+                                    src={item.imgURL}
+                                    alt={item.label}
+                                    width={20}
+                                    height={20}
+
+                                /></Link>
+                            <p className={`max-md:block`}>{item.label}</p>
+                        </Button>
+
+                    )
+                })}
+            </div>
+
+
+
+        </div>
+    )
+}
+
+export default Selected;
