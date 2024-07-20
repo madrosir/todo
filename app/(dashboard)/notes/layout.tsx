@@ -1,5 +1,4 @@
-import NotesDialog from "@/components/modal/NotesDialog";
-import NotesDialogMobile from "@/components/modal/NotesDialogmobile";
+import NotesDialogMobile from "@/components/modal/NotesDialogMobile";
 import Navbar from "@/components/nav/navbar";
 import Sidebar from "@/components/nav/sidebar";
 
