@@ -28,7 +28,7 @@ model Note {
   user       User?     @relation(fields: [authorId], references: [userid])
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
-  important  Boolean  
+  important  Boolean?  
   expired    DateTime?
   progress   Boolean   @default(false)
   tags       String[]

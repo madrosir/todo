@@ -35,22 +35,21 @@ const MarketingPage = () => {
     return (
 
 
-        <div className="flex items-center justify-center flex-col">
+        <div className="flex flex-col items-center justify-center">
             <div className={cn("flex items-center justify-center flex-col", headingFont.className)}>
-                <div className="mt-10  flex items-center border shadow-sm p-4 bg-amber-100 text-amber-700 rounded-full uppercase">
-                    <Medal className="h-6 w-6 mr-2 " />
+                <div className="mt-10 flex items-center rounded-full border bg-amber-100 p-4 uppercase text-amber-700 shadow-sm">
+                    <Medal className="mr-2 h-6 w-6" />
                     Mo 9999 task managment
                 </div>
-                <h1 className="mt-10 text-3xl md:text-6xl text-center text-neutral-800 mb-6">
+                <h1 className="mb-6 mt-10 text-center text-3xl text-neutral-800 md:text-6xl">
                     Taskflow propels teams forward.
                 </h1>
-                <div className="text-3xl md:text-6xl bg-gradient-to-r
-   from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md pb-1 w-fit">
+                <div className="w-fit rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 p-2 px-4 pb-1 text-3xl text-white md:text-6xl">
                     work forward.
                 </div>
             </div>
             <div className={cn("text-sm md:text-xl text-neutral-400 mt-4  max-w-xs md:max-w-2xl text-center mx-auto", textFont.className)}>
-                Taskflow: Supercharge Your Team's Productivity with Seamless Taskflow Management! Collaborate effortlessly, streamline projects, and elevate your workflow to unprecedented levels. Whether you're in a high-rise office or working from home, Taskflow empowers your team with intuitive taskflow control. .
+                Taskflow: Supercharge Your Teams Productivity with Seamless Taskflow Management! Collaborate effortlessly, streamline projects, and elevate your workflow to unprecedented levels. Whether you re in a high-rise office or working from home, Taskflow empowers your team with intuitive taskflow control. .
             </div>
             <Button className="mt-6" size='lg' asChild>
                 <Link href="/sign-up">

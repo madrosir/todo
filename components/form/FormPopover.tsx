@@ -20,6 +20,7 @@ import { FormInput } from "./FormInput";
 import { Calendar } from "@/components/ui/calendar"
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { Input } from "../ui/input";
 
 
 
@@ -59,7 +60,10 @@ export const FormPopover = ({
     });
     const onSubmit = (formData: FormData) => {
         const title = formData.get("title") as string;
-        const tags = formData.get("tags") as string;
+        const tagsString = formData.get("tags") as string;
+
+        // Convert the tagsString into an array of strings
+        const tags = tagsString.split(',').map(tag => tag.trim()); // Corrected type casting
 
 
 
@@ -90,12 +94,12 @@ export const FormPopover = ({
                 align={align}
                 sideOffset={sideOffset}
             >
-                <div className="text-md font-medium text-center text-neutral-600 pb-4">
+                <div className="text-md pb-4 text-center font-medium text-neutral-600">
                     Create Notes
                 </div>
                 <PopoverClose asChild>
                     <Button
-                        className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600"
+                        className="absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600"
                         variant="ghost"
                     >
                         <X className="h-4 w-4" />
@@ -123,7 +127,7 @@ export const FormPopover = ({
                             <button onClick={handleClick} type="button">Toggle</button>
                             {isSelected ? <p>On</p> : <p>Off</p>}
                         </div>                        <div>
-                            <input type="text" name="tags" id="tags" className="w-full border-2" />
+                            <Input type="text" name="tags" id="tags" className="w-full border-2" />
                         </div>
 
 
@@ -131,7 +135,7 @@ export const FormPopover = ({
                             id="title"
                             label="Notes Title"
                             type="text"
-                            className="w-full border-3"
+                            className="border-3 w-full"
                             errors={fieldErrors}
                         />
                         <Popover>

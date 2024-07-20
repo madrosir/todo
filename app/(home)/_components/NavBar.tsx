@@ -2,17 +2,14 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { UserButton, auth } from "@clerk/nextjs";
-import TodoMap from "@/components/add-todo/todo-map";
 
 
 
 
 const Navbar = () => {
-    const { userId } = auth();
 
     return (
-        <div className="flex justify-between relative  shadow-xl border-b-2 border-gray-300  bg-[#3d424a]">
+        <div className="relative flex justify-between border-b-2 border-gray-300 bg-[#3d424a] shadow-xl">
             <Image
                 src="/saas.svg"
                 alt="logo"
@@ -20,7 +17,7 @@ const Navbar = () => {
                 height={50}
 
             />
-            <div className="mx-4 py-5 px-6 space-x-4 md:block  md:w-auto w-full">
+            <div className="mx-4 w-full space-x-4 px-6 py-5 md:block md:w-auto">
                 <>
                     <Button size='sm' variant='outline' asChild>
                         <Link href='/sign-in'>
