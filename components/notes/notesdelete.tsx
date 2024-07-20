@@ -10,7 +10,6 @@ import { Button } from "../ui/button";
 import { useAction } from "@/hooks/useAction";
 import { deleteNote } from "@/action/delete-notes";
 import { FormSubmit } from "../form/FormSubmit";
-import { Check, X } from "lucide-react";
 
 interface NotesDeleteProps {
     id: string
@@ -42,7 +41,7 @@ const NotesDelete = ({ id, children, side = "bottom", align, sideOffset = 0 }: N
                 align={align}
                 sideOffset={sideOffset}
             >
-                <form action={onDelete} className="  " >
+                <form action={onDelete} className="" >
                     <div className="">
                         <FormSubmit disabled={isLoading} variant="primary" className="w-15">
                             Yes
@@ -51,7 +50,7 @@ const NotesDelete = ({ id, children, side = "bottom", align, sideOffset = 0 }: N
                 </form>
                 <PopoverClose asChild>
                     <Button
-                        className="absolute bottom-4 right-2 w-15 "
+                        className="w-15 absolute bottom-4 right-2"
                         variant="ghost"
                     >
                         No

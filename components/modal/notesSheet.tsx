@@ -1,12 +1,10 @@
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
+   
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { AlignJustify, AlignLeft } from 'lucide-react';
+import { AlignJustify } from 'lucide-react';
 import Image from "next/image";
 import Link from "next/link";
 

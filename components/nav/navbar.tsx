@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import NotesSheet from "../modal/notesSheet";
 
 
 
